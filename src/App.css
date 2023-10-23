@@ -1,0 +1,117 @@
+body {
+    padding: 100px;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+}
+.show {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    padding: 10px 20px;
+}
+/*radio*/
+.radio {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid silver;
+    flex-direction: column;
+}
+input {
+    margin: 20px;
+}
+button {
+    display: block;
+}
+.fade-enter-active {
+    animation: fade-in 500ms forwards;
+}
+.fade-exit-actived {
+    animation: fade-out 500ms forwards;
+}
+
+.todos {
+    margin: 0 auto;
+}
+
+.todo-enter-active {
+    animation: fade-in 500ms forwards;
+}
+.todo-exit-active {
+    animation: fade-out 500ms forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+}
+/*radio*/
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px dashed black;
+}
+.circle.entering {
+    animation: show-loader .5s forwards;
+}
+.circle.entered {
+    animation: rotate-loader .5s infinite;
+}
+.circle.exiting {
+    animation: show-loader .5s reverse;
+}
+.circle.exited {}
+
+@keyframes show-loader {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate-loader {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
